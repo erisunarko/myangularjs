@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Latihan Angular JS</title>
+	<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body ng-app = "myApp" ng-controller = "myController">
+	<input type = "text" name = "nama_awal" ng-model = "data_nama">
+	<input type = "text" name = "nama_akhir" ng-model = "data_nama2">
+	<h1>Full Name : {{ data_nama + " " + data_nama2}}</h1>
+</body>
+<script type="text/javascript">
+	var app = angular.module('myApp', []);
+		app.controller('myController', function($scope){
+			$scope.data_nama = 'koko';
+			$scope.data_nama2 = 'juos';
+		});
+</script>
+</html>
